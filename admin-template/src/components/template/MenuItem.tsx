@@ -8,24 +8,26 @@ interface MenuItemProps {
 }
 
 export default function MeuItem(props: MenuItemProps) {
-  function renderizerLink() {
+  function renderizarLink() {
     return (
       <div
-        className={
-          "flex flex-col justify-center items-center h-20 w-20 ${props.className} text-gray-600"
-        }
+        className={`flex flex-col justify-center items-center h-20 w-20 
+                  ${props.className} dark:text-gray-200`}
       >
         {props.icone}
-        <span className="text-xs font-light ">{props.texto}</span>
+        <span className={`text-xs font-light`}>{props.texto}</span>
       </div>
     );
   }
   return (
-    <li onClick={props.onClick} className={"hover:bg-gray-100"}>
+    <li
+      onClick={props.onClick}
+      className={`hover:bg-gray-100 cursor-pointer dark:hover:bg-gray-800`}
+    >
       {props.url ? (
-        <Link href={props.url}>{renderizerLink()}</Link>
+        <Link href={props.url}>{renderizarLink()}</Link>
       ) : (
-        renderizerLink()
+        renderizarLink()
       )}
     </li>
   );
