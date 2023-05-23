@@ -3,13 +3,13 @@ import Cabecalho from "./Cabecalho";
 import Conteudo from "./Conteudo";
 import useAppData from "@/data/hook/useAppData";
 
-interface Layoutprops {
+interface LayoutProps {
   titulo: string;
   subtitulo: string;
   children?: any;
 }
 
-export default function Layout(props: Layoutprops) {
+export default function Layout(props: LayoutProps) {
   const { tema } = useAppData();
   return (
     <div className={`${tema} flex h-screen w-screen`}>

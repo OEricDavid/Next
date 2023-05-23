@@ -1,11 +1,11 @@
 import MenuLateral from "./MenuLateral";
 
-interface Tituloprops {
+interface TituloProps {
   titulo: string;
   subtitulo: string;
 }
 
-export default function Titulo(props: Tituloprops) {
+export default function Titulo(props: TituloProps) {
   return (
     <div>
       <h1 className={`font-black text-3xl text-gray-900 dark:text-gray-100`}>
